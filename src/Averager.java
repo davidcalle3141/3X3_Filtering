@@ -50,7 +50,7 @@ public class Averager {
             arr[0][pos]=  arr[1][pos];
 
         }
-        arr[0][pos+1]= arr[1][pos];
+        arr[0][pos]= arr[1][pos-1];
         //bottom
         for(pos = numCols; pos>0; pos--){
 
@@ -64,7 +64,7 @@ public class Averager {
 
         }
 
-        arr[pos+1][numCols+1]= arr[pos+1][numCols];
+        arr[pos][numCols+1]= arr[pos-1][numCols+1];
         //left
         for(pos = numRows; pos>0;pos--){
             arr[pos][0]= arr[pos][1];
